@@ -41,10 +41,12 @@ Libre Baskerville looks good in headlines and presentational text, while Poppins
 
 Read up on how to use [custom Fonts in a Next.js](https://nextjs.org/docs/app/building-your-application/optimizing/fonts).
 
-### Logo
+### Assets
 
-The logo is available in SVG format. There's both a text version, and a square icon version. 
-Both are located inside the `/assets` folder.
+- `/assets/diversa.svg` - The logo for the client
+- `/assets/diversa_icon.svg` - The square logo for the client
+- `/assets/icon.svg` - `.svg` favicon for the project. It can be copied into the `/app` folder of a Next.js project.
+- `/assets/favicon.ico` - Fallback `.ico` favicon for the project. It can be copied into the `/app` folder of a Next.js project.
 
 ## Axe report
 
