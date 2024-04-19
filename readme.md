@@ -1,4 +1,4 @@
-# MMD Accessibility Project
+# MMD Case | Diversa Accessibility Project
 
 ## Assets
 
