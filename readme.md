@@ -1,5 +1,13 @@
 # MMD Case | Diversa Accessibility Project
 
+## Sitemap
+
+The project should, as a minimum, implement the following sitemap:
+
+![mmd-sitemap](https://github.com/charlie-tango/mmd-case-24/assets/3764345/624ffa85-0e85-4020-9231-f8c46e43b376)
+
+
+
 ## Assets
 
 To help you get started, we have provided you with a set of assets to use in the project.
