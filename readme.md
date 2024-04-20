@@ -120,6 +120,8 @@ const data = await response.json();
 
 The result is a JSON object with the following properties, coming from the [axe-core](https://github.com/dequelabs/axe-core/) results:
 
+![report](https://github.com/charlie-tango/mmd-case-24/assets/3764345/ecc6f61f-eaff-4966-87f3-dd8629ccd15e)
+
 - `url` The URL of the page that was tested.
 - `timestamp` - The date and time that analysis was completed.
 - `tags` - The tags for the rules that were executed.
@@ -134,6 +136,8 @@ The result is a JSON object with the following properties, coming from the [axe-
     - `incomplete`: Also known as "needs review," these results were aborted and require further testing. This can happen either because of technical restrictions to what the rule can test, or because a javascript error occurred.
 
 Each object returned in these arrays have the following properties:
+
+![violations](https://github.com/charlie-tango/mmd-case-24/assets/3764345/4fcb1574-bfd3-4245-84a9-08fd3337ba44)
 
 - `description` - Text string that describes what the rule does
 - `help` - Help text that describes the test that was performed
