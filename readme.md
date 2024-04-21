@@ -1,6 +1,15 @@
 # MMD Case | Diversa Accessibility Project
 
-## Sitemap
+Your task is to develop a web application in Next.js that demonstrates how a website performs in relation to the WCAG 2.1 guidelines.
+The aim is to make it understandable even for individuals without a technical background and to show how Diversa can assist them.
+
+**Tasks**
+
+- User Experience & Design
+- Accessibility
+- Building a Next.js application
+- Server-side data fetching
+- Parsing and presenting JSON data
 
 The project should, as a minimum, implement the following sitemap:
 
@@ -258,9 +267,9 @@ const nextConfig = {
 };
 ```
 
-This allows Next to optimize the image from a remote source.
+This allows Next to optimize the image from a remote source (e.g. another domain).
 
 ### Metadata
 
 Remember to add [metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata) to the page, so it has a relevant title and description for SEO and social media.
-
+Are there other fields or assets that you think should be included?
