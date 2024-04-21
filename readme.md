@@ -63,7 +63,7 @@ use [custom Fonts in a Next.js](https://nextjs.org/docs/app/building-your-applic
 
 ## Endpoints
 
-The endpoints you should use can be accessed on `https://mmd-a11y-api.app/`.
+The endpoints you should use can be accessed on `https://mmd-a11y-api.vercel.app/`.
 
 ### GET `/api/scan`
 
@@ -103,7 +103,7 @@ const params = new URLSearchParams({
   url: "https://www.charlietango.dk",
 });
 const response = await fetch(
-  `https://mmd-a11y-api.app/api/scan?${params.toString()}`,
+  `https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`,
 );
 const data = await response.json();
 ```
@@ -204,3 +204,63 @@ You can use a [browser extension for Axe](https://chromewebstore.google.com/deta
 to get a more visual representation of an Axe result. The extension
 provides the same core tool used to generate the data, so you should
 see the same results as the endpoint you are going to use.
+
+## Next.js implementation
+
+A basic example of how to use the API in a Next.js project, to generate and display a report:
+
+**`/report/page.tsx`**
+
+```jsx
+import Image from "next/image";
+
+// Revalidate route every 30 minutes
+export const revalidate = 1800;
+
+export default async function Page({ searchParams }) {
+  const params = new URLSearchParams(searchParams);
+  const response = await fetch(
+    `https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`,
+  );
+  const data = await response.json();
+
+  return (
+    <main>
+      <h1>Report for {data.url}</h1>
+      <p>Found {data.violations.length} issues</p>
+      <Image
+        alt={data.url}
+        src={data.screenshot.url}
+        width={data.screenshot.width}
+        height={data.screenshot.height}
+      />
+    </main>
+  );
+}
+```
+
+### Page screenshot
+
+If you want to show the screenshot of the page that was tested, with [next/image](https://nextjs.org/docs/app/building-your-application/optimizing/images), you'll need to allow the image source.
+In the `next.config.js` file, add the following setting:
+
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*.public.blob.vercel-storage.com",
+      },
+    ],
+  },
+};
+```
+
+This allows Next to optimize the image from a remote source.
+
+### Metadata
+
+Remember to add [metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata) to the page, so it has a relevant title and description for SEO and social media.
+
