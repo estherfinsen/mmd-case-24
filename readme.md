@@ -1,9 +1,11 @@
 # MMD Case | Diversa Accessibility Project
 
+## The task
+
 Your task is to develop a web application in Next.js that demonstrates how a website performs in relation to the WCAG 2.1 guidelines.
 The aim is to make it understandable even for individuals without a technical background and to show how Diversa can assist them.
 
-**Tasks**
+**You'll get to work with**
 
 - User Experience & Design
 - Accessibility
@@ -11,9 +13,38 @@ The aim is to make it understandable even for individuals without a technical ba
 - Server-side data fetching
 - Parsing and presenting JSON data
 
-The project should, as a minimum, implement the following sitemap:
+### Functional Requirements
+
+The project should implement the following pages:
 
 ![mmd-sitemap](/mmd-sitemap.png)
+
+#### General
+
+- The project should be built with Next.js.
+- The project should be responsive and work on both desktop and mobile devices.
+- The project should be accessible and follow the WCAG 2.1 guidelines.
+- Ensure the pages generate metadata for SEO and social media sharing.
+
+#### Landing Page
+
+- Introduce the user to the project and explain what it does.
+- Include a call to action to start a report.
+- The input field and submit button should trigger a `<form>` action, that sends the user to the report page with the URL as a query parameter.
+
+#### Report
+
+- The user should be able to enter a URL and get a report on how the website performs in relation to the WCAG 2.1 guidelines.
+- The report should be easy to understand and should include a summary of the issues found.
+- The report should **calculate a score** based on the number of issues and their impact, compared to the total number of checks.
+- A loading screen should be displayed while the report is being generated.
+- If the api fails, an error screen should be shown.
+
+#### Rules
+
+- The user should be able to read detailed information about different rules and how they affect the accessibility of the website.
+  - Add content for at least 3 rules.
+- Include an overview page of all the different [Axe rules](https://dequeuniversity.com/rules/axe/4.9) you test for.
 
 ## Assets
 
