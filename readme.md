@@ -3,7 +3,7 @@
 ## The task
 
 Your task is to develop a web application in Next.js that demonstrates how a website performs in relation to the WCAG 2.1 guidelines.
-The aim is to make it understandable even for individuals without a technical background and to show how Diversa can assist them.
+The aim is to make it understandable even for individuals without a technical background and to show how Diversa can assist them. hey 
 
 **You'll get to work with**
 
