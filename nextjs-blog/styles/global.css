@@ -1,3 +1,21 @@
+:root {
+  /* colors */
+  --colors-brand-beige-00: #fefefb;
+  --colors-brand-beige-10: #f7f6e8; /* Background */
+  --colors-brand-turquoise-00: #e6fafe;
+  --colors-brand-turquoise-20: #b4f1fd;
+  --colors-brand-turquoise-50: #69e3fc; /* Brand */
+  --colors-brand-yellow-40: #ffea80; /* Brand */
+  --colors-brand-yellow-100: #e5c000;
+  --colors-brand-orange-70: #ff7733; /* Brand */
+  --colors-grey-00: #ffffff;
+  --colors-grey-20: #cccccc;
+  --colors-grey-40: #999999;
+  --colors-grey-60: #666666;
+  --colors-grey-80: #333333;
+  --colors-grey-100: #000000;
+}
+
 html,
 body {
   padding: 0;
@@ -30,3 +48,4 @@ img {
   max-width: 100%;
   height: auto;
 }
+
